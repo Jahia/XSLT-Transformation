@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="xmlChoiceList" class="org.jahia.services.content.nodetypes.initializers.XmlInitializer" >
+             <property name="key" value="xmlChoiceList"/>
+    </bean>
+    <bean id="xsltChoiceList" class="org.jahia.services.content.nodetypes.initializers.XsltInitializer" >
+             <property name="key" value="xsltChoiceList"/>
+    </bean>
+</beans>

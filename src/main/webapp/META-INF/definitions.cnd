@@ -1,0 +1,30 @@
+<mynt = 'http://www.my.org/jahia/nt/1.0'>
+<mymix = 'http://www.my.org/jahia/mix/1.0'>
+
+[mymix:xmlUri] > jmix:templateMixin mixin
+extends=mynt:xmlxslt
+- xmlUri (string) = "http://download.oracle.com/javaee/1.4/tutorial/examples/jaxp/xslt/samples/article3.xml"
+
+[mymix:xmlFile] > jmix:templateMixin mixin
+extends=mynt:xmlxslt
+- xmlFile (weakreference, picker[type='file'])
+
+[mymix:xmlText] > jmix:templateMixin mixin
+extends=mynt:xmlxslt
+- xmlText (string, textarea)
+
+[mymix:xsltUri] > jmix:templateMixin mixin
+extends=mynt:xmlxslt
+- xsltUri (string) = "http://download.oracle.com/javaee/1.4/tutorial/examples/jaxp/xslt/samples/article3.xsl"
+
+[mymix:xsltFile] > jmix:templateMixin mixin
+extends=mynt:xmlxslt
+- xsltFile (weakreference, picker[type='file'])
+
+[mymix:xsltText] > jmix:templateMixin mixin
+extends=mynt:xmlxslt
+- xsltText (string, textarea)
+
+[mynt:xmlxslt] > jnt:content, jmix:droppableContent, jmix:structuredContent
+- xmlReference (string, choicelist[xmlChoiceList])
+- xsltReference (string, choicelist[xsltChoiceList])
